@@ -1,0 +1,24 @@
+#include <stdio.h>
+int Ans(int num[], int size) 
+{
+    int result=0;
+    for (int i=0;i<size;i++) 
+    {
+        result^=num[i];
+    }
+    return result;
+}
+int main() {
+    int size;
+    printf("Enter number of elements ");
+    scanf("%d", &size);
+    int num[size];
+    printf("Enter %d elements \n", size);
+    for (int i=0;i<size;i++) 
+    {
+        scanf("%d", &num[i]);
+    }
+    int Sol=Ans(num, size);
+    printf("The number that appears only once is %d\n", Sol);
+    return 0;
+}
